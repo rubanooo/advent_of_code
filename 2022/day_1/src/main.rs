@@ -1,5 +1,5 @@
 fn main() {
-    let input = std::fs::read_to_string("./2022/day_1/input.txt").unwrap();
+    let input = include_str!("./input.txt");
 
     println!("Problem one: {}", problem_one(&input));
     println!("Problem two: {}", problem_two(&input));
