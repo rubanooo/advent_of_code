@@ -11,7 +11,7 @@ fn calculate_start_of_packet(input: &str, window_size: usize) -> usize {
     let index = input
         .as_bytes()
         .windows(window_size)
-        .position(|window| window.iter().cloned().collect::<HashSet<u8>>().len() == window_size)
+        .position(|window| window.iter().collect::<HashSet<&u8>>().len() == window_size)
         .expect("No valid position found");
 
     index + window_size
